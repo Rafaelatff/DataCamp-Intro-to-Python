@@ -118,3 +118,68 @@ command1; command2
 command1
 command2
 ```
+## Functions
+
+To get helo on a function I can use: ```help(len)``` or ```?len```. Next a few examples of Functions:
+
+```py
+max(list_name)  # return the maximum number of the list.
+
+round(1.68,1) # to round number to ony one house.
+
+round(1.68) # returns the value of the number of houses after the dot.
+
+len(var1) # returns the length of the variable.
+
+sorted(list_name,reverse=False) # To sort a list, reverse=False = ascending order.
+
+
+```
+## Methods
+
+Methods: function that belong to objects. Python is object-oriented, but not only.
+Python is a structured, object-oriented and functional programming language.
+
+```py
+list_name.index("example") # Call method index () on list_name
+list_name.count("example") # Shows how many times "example" appears on the list_name
+list_name.reverse() # Reverses the order of the elements in the list
+list_name.remove() # Removes the first element of a list that matches the input
+```
+
+Other examples: 
+
+```py
+word = 'word'
+word.capitalize() # Returns 'Word'
+word.replace("r","rl") # Returns 'World'
+word.upper() # Returns WORLD
+
+```
+
+Instead of ```list_name + "me"``` I can ```list_name.append("me")```.
+
+## Packages
+
+Packages are directories of Python Scripts, it specifies functions, methods and types for particular problemns. Examples are NumPy and Matplotlib.
+First it is needed to install on the system by using the pip. To install pip using the terminal use ```get-pip.py```, then ```python3 get-pip.py``` and then the package, ```pip3 install numpy```. The examples are for Python version 3.
+On Python code, we need to import this, by using ```import numpy```.
+Also, I can do:
+
+```py
+import numpy
+numpy.array([1, 2, 3])
+```
+or 
+```py
+import numpy as np # Preferred
+np.array([1, 2, 3])
+```
+or 
+```py
+import numpy as array
+array([1, 2, 3]) # Directly uses the array from numpy package
+```
+I can ```import math``` to use the pi value by ```math.pi```. If only the pi is used from that package, I can be more selective by ```from math import pi```.
+
+I can also import only a subpackage, such as ```import scipy.linalg```.
