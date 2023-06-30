@@ -183,3 +183,40 @@ array([1, 2, 3]) # Directly uses the array from numpy package
 I can ```import math``` to use the pi value by ```math.pi```. If only the pi is used from that package, I can be more selective by ```from math import pi```.
 
 I can also import only a subpackage, such as ```import scipy.linalg```.
+
+## NumPy (numeric py)
+
+### Arrays
+
+Gives an alternative for python list, the **NumPy Array** (it creates the ```<class 'numpy.ndarray'>```). It performs calculations over entire arrays.
+It is required, to install over the terminal, the NumPy package by using ```pip3 install numpy```.
+Then you can import the NumPy by calling ```import numpy as np```.
+
+The biggest advantage of using the NumPy Array instead of the List, is that I don't need to pass the index to perform calculatios over the entire list.
+
+Note: NumPy Array assumes that the array contain only one type and not several as it occurs with the list. It looks more like the arrays from C.
+
+* To transform a list in array use ```np_name_example = np.array(list_name)```.
+* I can multiply all the values of an array by using ```np_height_m = np_height_in * 0.0254```. Another example: ```np_weight_kg = np.array(wight_lb) * 0.453592```.
+* Array can have its subset (index) as boolean type.
+* *type coercion* happens when you try to add more than 1 type on a array.
+
+### 2D Arrays
+
+```py
+np_2d([[ 00, 01, 02, 03],
+	[10, 11, 12, 13]])
+```
+
+* Index is [row,column].
+* ```np_2d[0,2]``` is the same as ```np_2d[0][2]```.
+* ```print(np_array_name.shape)``` returns the elements of the array.
+* ```np_x[:, 0]``` Include all rows, and first column value.
+
+### Data Analysis
+
+* Média ```np.mean(np_array_name[:,0])```.
+* Mediana ```np.median(np_array_name[:,0])```.
+* ```np.corrcoef(np_array_name[:,0],np_array_name[:,1]```.
+* Standard deviation ```np.std(np_array_name[:,0])```.
+* To sample random data ```np.random.normal()```. As example ```height = np.round(np.random.normal(1.75, 0.20, 5000),2)```. Then ```np_city = np.column_stack((height, weight))```.
